@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head></head>
+  <body>
+  
+    <script>
+      function convertToCelsius(farenheit){
+    return (farenheit - 32) * 5 / 9
+      }
+
+      function convertToFahrenheit(celsius) {
+     return((celsius * 9 / 5) + 32)
+
+      }
+
+      function greet(name) {
+        if(!name){
+          console.log('Hi there')
+        } else {
+        console.log(`Hello ${name}`);}
+      }
+      function convertTemperature ( degrees, unite) { if (unite === 'C') {
+        const result = convertToFahrenheit(degrees);
+        return `${result}F`;
+      }else if (unite === 'F'){
+        const result = convertToCelsius(degrees);
+        return `${result}C`;
+
+      }
+
+      }
+     console.log( convertTemperature (86, 'F'))
+
+      greet();
+      greet('hamed');
+      greet('simon')
+      console.log(convertToFahrenheit(25))
+      console.log(convertToCelsius(86))
+    </script>
+  </body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+  <html>
+    <title>
+      App
+    </title>
+    <head>
+      <style>
+    
+      </style>
+        <button class="js-button" onclick="
+        updateButton();
+      ">Start</button>
+      <P></P>
+      <button onclick="
+      added()
+      setTimeout(remove,2000)
+      " class="js-add-button">Add to Cart</button>
+      <P class="js-add-p"></P>
+      <button class="js-addd-button">Add</button>
+      <button class="js-remove-button" >Remove</button>
+  
+
+    </head>
+    <body>
+
+      <script>
+        let messages = 2;
+        const add =() => console.log(2+3);
+        add();
+        add();
+        function runTwise(fun){
+         fun()
+          fun()
+         
+        }
+        runTwise(add)
+
+        const button = document.querySelector('.js-button');
+        function updateButton() {
+          button.innerHTML = 'Loading'
+        setTimeout(() => {
+          button.innerHTML = 'Finished!';
+        }, 1000);
+      }
+      function added(){
+         document.querySelector('.js-add-p').innerHTML ='Added'
+         
+        
+      }
+      function remove(){
+        document.querySelector('.js-add-p').innerHTML = ''
+      }
+      setInterval(() => {
+        if(messages === 0){document.title ='App'}
+        if (document.title === 'App') {
+          document.title = `(${messages}) New messages`;
+        } else {
+          document.title = 'App';
+        }
+      }, 1000);
+    
+      document.querySelector('.js-addd-button').addEventListener('click',() => {messages++})
+      document.querySelector('.js-remove-button').
+      addEventListener('click',()=>{messages--})
+      
+
+
+    
+
+
+      
+
+      </script>
+    </body>
+  </html>

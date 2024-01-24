@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head></head>
+  <body>
+    <script>
+
+  function minMax(nums) {
+        // We'll set the starting values of min and max
+        // as the first value in the array. (This is
+        // just one way to set the starting values. You
+        // can use another way if you like.)
+        const result = {
+          min: nums[0],
+          max: nums[0]
+        };
+
+        for (let i = 0; i < nums.length; i++) {
+          const value = nums[i];
+
+          // If the value is less than the min,
+          // update the min.
+          if (value < result.min) {
+            result.min = value;
+          }
+
+          // If the value is greater than the max,
+          // update the max.
+          if (value > result.max) {
+            result.max = value;
+          }
+        }
+
+        return result;
+      }
+      console.log(minMax([]))
+      const fruits = ['Banana','Orange','Apple', 'Mango']
+      const cirtus = fruits.slice()
+      console.log(cirtus)
+      fruits.sort()
+      const points = [20,100,1,5,25,10]
+      points.sort(function(a,b){return b-a})
+      console.log(Math.max.apply(null, points))
+     
+
+     
+
+
+
+    console.log(points)
+      console.log(fruits)
+    </script>
+  </body>
+</html>

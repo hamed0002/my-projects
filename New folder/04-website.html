@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>HTML CSS Review</title>
+ <script>
+
+// Setup
+/*const contacts = [
+  {
+    firstName: "Akira",
+    lastName: "Laine",
+    number: "0543236543",
+    likes: ["Pizza", "Coding", "Brownie Points"],
+  },
+  {
+    firstName: "Harry",
+    lastName: "Potter",
+    number: "0994372684",
+    likes: ["Hogwarts", "Magic", "Hagrid"],
+  },
+  {
+    firstName: "Sherlock",
+    lastName: "Holmes",
+    number: "0487345643",
+    likes: ["Intriguing Cases", "Violin"],
+  },
+  {
+    firstName: "Kristian",
+    lastName: "Vos",
+    number: "unknown",
+    likes: ["JavaScript", "Gaming", "Foxes"],
+  },
+];
+
+function lookUpProfile(name, prop) {
+  // Only change code below this line
+  for(let i = 0; i<4;i++){
+    if( contacts[i].firstName == name){
+    if(contacts[i].hasOwnProperty(prop)) {return contacts[i][prop]}else{return 'No such property'}
+  }
+} return 'No such contact'
+
+  // Only change code above this line
+}
+
+
+console.log(lookUpProfile("Akira", "adress"));
+
+
+
+function rangeOfNumbers(startNum, endNum) {
+if (endNum < startNum){return[]}else{
+  const numbers = rangeOfNumbers(startNum,endNum-1);
+  numbers.push(endNum)
+  return numbers
+}
+}
+console.log(rangeOfNumbers(1,5))
+function factorial(number){
+  if (number === 1){
+    return 1
+  }else{
+ const result =  (factorial(number-1) * number)
+ return result
+  }
+}
+console.log(factorial(5))*/
+var range = function(start_num, end_num) 
+{
+  if (end_num - start_num === 2) 
+  {
+    return [start_num + 1];
+  } 
+  else 
+  {
+    var list = range(start_num, end_num - 1);
+    list.push(end_num - 1);
+    return list;
+  }
+};
+
+console.log(range(2,9));
+
+
+let extractStr = "Extract the word 'coding' from this string.";
+let codingRegex = /coding/; // Change this line
+let result = extractStr.match(codingRegex); // Change this line
+console.log(extractStr.test(/coding/))
+
+ </script>
+
+    </body>
+</html>
